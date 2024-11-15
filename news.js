@@ -1,19 +1,19 @@
 const newsData = [
     {
         id: 1,
-        title: "Novo Conteúdo Space Explorer",
-        description: "Nova expansão com planetas e missões",
-        date: "12/03/2024",
-        tag: "Atualização",
-        image: "URL_DA_IMAGEM_1"
+        title: "PROJECT: GLITCHES - ALPHA TEST",
+        description: "Alpha teste do jogo PROJECT: GLITCHES já está disponível, faça o formulário para participar!",
+        date: "15/11/2024",
+        tag: "Jogos",
+        image: "https://cdn.discordapp.com/attachments/1288557843410190459/1307024699900956772/146_Sem_Titulo_20241115134521.jpg?ex=6738cd1b&is=67377b9b&hm=f0b6bad6fd7095dae7968f7c0ee152bf77446c13d2bb266e7343457f10f97d6b&"
     },
     {
         id: 2,
-        title: "Promoção de Verão",
-        description: "Jogos com até 50% de desconto",
-        date: "10/03/2024",
-        tag: "Promoção",
-        image: "URL_DA_IMAGEM_2"
+        title: "BEM-VINDO AO NOVO SITE!",
+        description: "Lançamento do novo site da JeffinVerso!",
+        date: "15/11/2024",
+        tag: "SITE",
+        image: "https://cdn.discordapp.com/attachments/1288557843410190459/1307025088511475792/147_Sem_Titulo_20241115135100.jpg?ex=6738cd78&is=67377bf8&hm=fc3d61b36e4cf7409fae9396f426b5ac454dd0d8bb8291893d325cf5bedf4b49&"
     }
 ];
 

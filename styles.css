@@ -35,9 +35,9 @@ header {
 
 .nav-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0.8rem 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -45,7 +45,7 @@ header {
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .header-logo {
@@ -95,45 +95,27 @@ header {
 @media (max-width: 768px) {
     .nav-container {
         display: grid;
-        grid-template-columns: 40px 1fr 40px; /* Espaço para hamburguer, logo e espaço vazio */
+        grid-template-columns: 40px 1fr 40px;
         align-items: center;
-        justify-items: center;
-        padding: 0.5rem 1rem;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        grid-column: 1;
-    }
-
-    .hamburger-line {
-        width: 25px;
-        height: 2px;
-        background-color: var(--cosmic-white);
-        margin: 2px 0;
-        transition: 0.3s;
+        padding: 0.8rem 1rem;
+        position: relative;
     }
 
     .logo-section {
-        grid-column: 2;
-        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
     }
 
     .logo-text {
-        display: none; /* Esconde o texto no mobile */
+        font-size: 1.1rem;
+        white-space: nowrap;
     }
 
-    .header-logo {
-        height: 30px;
+    .menu-toggle {
+        grid-column: 1;
+        z-index: 2;
     }
 
     .nav-links {
@@ -451,10 +433,11 @@ section {
 /* Redes Sociais */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
+    padding: 1rem;
 }
 
 .social-card {
@@ -465,53 +448,53 @@ section {
     background: rgba(107, 47, 187, 0.1);
     border: 2px solid var(--neon-purple);
     border-radius: 12px;
+    transition: all 0.3s ease;
     text-decoration: none;
     color: var(--cosmic-white);
-    transition: all 0.3s ease;
 }
 
 .social-card i {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
-.social-card span {
-    font-size: 0.8rem;
+.platform-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-user {
+    font-size: 0.9rem;
     color: var(--star-purple);
-    font-size: 0.7rem !important;
 }
 
-/* Cores específicas para cada rede social */
-.youtube:hover {
-    border-color: #FF0000;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+/* Efeitos hover personalizados */
+.social-card:hover {
+    border-color: var(--hover-color);
+    box-shadow: 0 0 20px rgba(var(--hover-color), 0.3);
+    transform: translateY(-5px);
 }
 
-.twitch:hover {
-    border-color: #9146FF;
-    box-shadow: 0 0 15px rgba(145, 70, 255, 0.5);
+.social-card:hover i {
+    color: var(--hover-color);
+    transform: scale(1.1);
 }
 
-.twitter:hover {
-    border-color: #1DA1F2;
-    box-shadow: 0 0 15px rgba(29, 161, 242, 0.5);
-}
+/* Media Queries */
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
 
-.instagram:hover {
-    border-color: #E4405F;
-    box-shadow: 0 0 15px rgba(228, 64, 95, 0.5);
-}
+    .social-card {
+        padding: 1.5rem;
+    }
 
-.discord:hover {
-    border-color: #7289DA;
-    box-shadow: 0 0 15px rgba(114, 137, 218, 0.5);
-}
-
-.tiktok:hover {
-    border-color: #00F2EA;
-    box-shadow: 0 0 15px rgba(0, 242, 234, 0.5);
+    .social-card i {
+        font-size: 2rem;
+    }
 }
 
 /* Animações */
@@ -761,4 +744,20 @@ section {
     border-radius: 12px;
     padding: 1rem;
     transition: all 0.3s ease;
+}
+
+.game-link {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.game-link .retro-button {
+    width: 100%;
+}
+
+/* Efeito hover no botão */
+.game-link .retro-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4);
 }
